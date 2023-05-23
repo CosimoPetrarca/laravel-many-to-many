@@ -19,9 +19,9 @@ class TechnologySeeder extends Seeder
     {
         $technologies = ['Laravel', 'HTML', 'CSS', 'Sass', 'JavaScript', 'PHP', 'MySQL', 'VueJS', 'React'];
 
-        //Schema::disableForeignKeyConstraints();
+        Schema::disableForeignKeyConstraints();
         Technology::truncate();
-        //Schema::enableForeignKeyConstraints();
+        Schema::enableForeignKeyConstraints();
         
         foreach ($technologies as $technology) {
             $new_technology = new Technology();
