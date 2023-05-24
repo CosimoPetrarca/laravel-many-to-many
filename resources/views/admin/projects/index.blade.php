@@ -18,7 +18,7 @@
                 <th scope="col">Nome Progetto</th>
                 <th scope="col">Descrizione</th>
                 <th scope="col">Categoria</th>
-                <th scope="col">Tecnlogia</th>
+                <th scope="col">Tecnologia</th>
                 <th scope="col">Data inizio</th>
                 <th scope="col">Data fine</th>
                 <th scope="col">Slug</th>
