@@ -8,8 +8,8 @@
     </div>
     @endif
     <div class="d-flex justify-content-between align-items-center">
-    <h2 class="fs-4 text-secondary my-4"> I miei Progetti</h2>
-    <a href="{{ Route('admin.projects.create') }}" class="btn btn-success btn-sm">Crea Nuovo Progetto</a>
+        <h2 class="fs-4 text-secondary my-4"> I miei Progetti</h2>
+        <a href="{{ Route('admin.projects.create') }}" class="btn btn-success btn-sm">Crea Nuovo Progetto</a>
 
     </div>
     <table class="table">
@@ -18,6 +18,7 @@
                 <th scope="col">Nome Progetto</th>
                 <th scope="col">Descrizione</th>
                 <th scope="col">Categoria</th>
+                <th scope="col">Tecnlogia</th>
                 <th scope="col">Data inizio</th>
                 <th scope="col">Data fine</th>
                 <th scope="col">Slug</th>
@@ -29,6 +30,11 @@
                 <th scope="row">{{ $project->title }}</th>
                 <td>{{ $project->description }}</td>
                 <td>{{ $project->type?->name ?: 'Categoria non presente' }}</td>
+                <td>
+                    @foreach ($project->technologies as $technology)
+                    {{ $technology->name }}
+                    @endforeach
+                </td>
                 <td>{{ $project->start_date }}</td>
                 <td>{{ $project->end_date }}</td>
                 <td>{{ $project->slug }}</td>
