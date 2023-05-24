@@ -24,5 +24,9 @@
     <p><strong>Data fine Progetto:</strong> {{ $project->end_date }}</p>
     <p><strong>Slug:</strong> {{ $project->slug }}</p>
     <hr>
+    <div class="d-flex gap-3">
+        <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-warning btn-sm">Modifica</a>
+        <a href="{{ Route('admin.projects.index') }}" class="btn btn-primary btn-sm">Torna a Project</a>
+    </div>
 </div>
 @endsection

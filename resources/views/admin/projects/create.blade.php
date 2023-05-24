@@ -11,8 +11,9 @@
         </ul>
     </div>
     @endif
-    <div class="d-flex align-items-center">
+    <div class="d-flex justify-content-between align-items-center">
         <h2 class="fs-4 text-secondary my-4">Crea Nuovo Progetto</h2>
+        <a href="{{ Route('admin.projects.index') }}" class="btn btn-primary btn-sm">Torna a Project</a>
     </div>
 
     <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
