@@ -31,20 +31,19 @@
                 <td>{{ $project->description }}</td>
                 <td>{{ $project->type?->name ?: 'Categoria non presente' }}</td>
                 <td>
-                    @foreach ($project->technologies as $technology)
+                    @forelse ($project->technologies as $technology)
                     {{ $technology->name }}
-                    @endforeach
+                    @empty
+                    Tecnologia non presente
+                    @endforelse
                 </td>
                 <td>{{ $project->start_date }}</td>
                 <td>{{ $project->end_date }}</td>
                 <td>{{ $project->slug }}</td>
                 <td><a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-primary btn-sm">Dettaglio</a></td>
-                <td><a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-primary btn-sm">Modifica</a></td>
+                <td><a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-warning btn-sm">Modifica</a></td>
                 <td><a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#project-{{ $project->id }}">Elimina</a></td>
             </tr>
-
-
-
 
             <div class="modal fade" id="project-{{ $project->id }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog">

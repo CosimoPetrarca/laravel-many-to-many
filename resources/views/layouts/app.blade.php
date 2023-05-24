@@ -23,7 +23,7 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
@@ -93,6 +93,14 @@
         <main class="">
             @yield('content')
         </main>
+
+        <footer class="main-footer">
+            <div class="container">
+                <p class="text-muted text-center">
+                    Made with <span class="fa fa-heart"></span> by <a href="#" target="_blank">Classe 89</a>
+                </p>
+            </div>
+        </footer>
     </div>
 </body>
 

@@ -14,9 +14,11 @@
     <p><strong>Descrizione Progetto:</strong> {{ $project->description }}</p>
     <p><strong>Categoria:</strong> {{ $project->type?->name ?: 'Categoria non presente' }}</p>
     <p><strong>Tecnologie:</strong>
-        @foreach ($project->technologies as $technology)
+        @forelse ($project->technologies as $technology)
         {{ $technology->name }}
-        @endforeach
+        @empty
+        Tecnologia non presente
+        @endforelse
     </p>
     <p><strong>Data inizio Progetto:</strong> {{ $project->start_date }}</p>
     <p><strong>Data fine Progetto:</strong> {{ $project->end_date }}</p>
